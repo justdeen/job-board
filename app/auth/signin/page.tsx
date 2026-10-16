@@ -1,4 +1,4 @@
-// import { login } from "@/lib/auth";
+import { login } from "@/lib/auth";
 
 export default function SignInPage() {
   return (
@@ -15,7 +15,7 @@ export default function SignInPage() {
 
         <div className="mt-8">
           <button
-            // onClick={login}
+            onClick={login}
             className="w-full flex items-center justify-center gap-3 px-4 py-3 border border-gray-300 rounded-lg text-gray-700 bg-white hover:bg-gray-50 transition-colors duration-200"
           >
             <svg
