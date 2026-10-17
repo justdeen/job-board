@@ -35,4 +35,4 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
-The build command generates Prisma Client for the deployment platform before building the app. Configure `DATABASE_URL` in the Vercel project's environment variables.
+Prisma Client is generated during installation and again before the production build, for the deployment platform. Next.js is configured to include the generated client files in its deployment output. Configure `DATABASE_URL` in the Vercel project's environment variables.
