@@ -26,7 +26,7 @@ export async function POST(request: Request) {
   }
 }
 
-export async function GET(request: Request) {
+export async function GET() {
   try {
     const job = await prisma.job.findMany({
       orderBy:{
