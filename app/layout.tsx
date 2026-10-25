@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Navbar from "../components/Navbar"
+import NavbarTest from "../components/NavbarTest"
 import SessionProvider from "@/components/SessionProvider";
 import {auth} from "@/auth"
 
@@ -34,7 +34,8 @@ export default async function RootLayout({
       >
         <SessionProvider session={session}>
           <div className="min-h-screen bg-gray-50">
-            <Navbar/>
+            {/* <Navbar/> */}
+            <NavbarTest/>
             <main className="container mx-auto px-4 py-8">{children}</main>
           </div>
         </SessionProvider>

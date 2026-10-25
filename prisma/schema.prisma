@@ -20,6 +20,7 @@ model User {
   email         String          @unique
   emailVerified DateTime?
   image         String?
+  passwordHash  String?
   accounts      Account[]
   sessions      Session[]
   jobs          Job[] @relation("PostedJobs")
@@ -93,8 +94,12 @@ model Application {
   status String @default("PENDING")
   appliedAt DateTime @default(now())
 
-  user User @relation(fields: [userId], references: [id])
-  job Job @relation(fields: [jobId], references: [id])
+  cvFile      Bytes
+  cvFileName  String
+  cvMimeType  String
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  job Job @relation(fields: [jobId], references: [id], onDelete: Cascade)
 
   @@unique([jobId, userId])
 }
