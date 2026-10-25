@@ -1,4 +1,5 @@
 import { login } from "@/lib/auth";
+import Link from "next/link";
 
 export default function SignInPage() {
   return (
@@ -46,6 +47,24 @@ export default function SignInPage() {
             Privacy Policy
           </a>
         </div>
+
+        <div className="space-y-2">
+          <div className="mt-6 text-center text-gray-500">
+            <Link
+            className="text-indigo-600 hover:text-indigo-500"
+            href="/auth/signup">
+              Create an account
+            </Link>
+          </div>
+          <div className="mt-2 text-center text-gray-500">
+            <Link
+            className="text-indigo-600 hover:text-indigo-500"
+            href="/auth/loginWithCredentials">
+              Login with Email & Password
+            </Link>
+          </div>
+        </div>
+
       </div>
     </div>
   );
